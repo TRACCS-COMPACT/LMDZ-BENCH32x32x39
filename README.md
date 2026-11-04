@@ -1,11 +1,11 @@
-# LMDZ-BECNH32x32x39-DEMO
+# LMDZ-BENCH32x32x39-DEMO
 
 
 ```DOI TO CREATE```
 
 ## Context and Motivation
 
-Purpose of the experiment is to provide a simple template for Python hybrid realistic atmospheric general circulation configuration. Internal and external computed fields are written in an output file with the LMDZ output system (XIOS).
+Purpose of the experiment is to provide templates for realistic hybrid Python-LMDZ general atmospheric circulation configuration. Internal and external computed fields are written in an output file with the LMDZ output system (XIOS).
 
 #### Variations
 - **01** : Dummy Python script
