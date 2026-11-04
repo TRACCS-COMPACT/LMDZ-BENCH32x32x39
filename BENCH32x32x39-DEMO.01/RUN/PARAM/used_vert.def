@@ -1,0 +1,12 @@
+ #
+ # Values of iflag_top_bound comes from run.def
+ #
+ iflag_top_bound =            2
+ #
+ # Values of tau_top_bound comes from run.def
+ #
+ tau_top_bound =    5.0000000000000002E-005
+ #
+ # Values of ok_strato comes from run.def
+ #
+ ok_strato = TRUE 

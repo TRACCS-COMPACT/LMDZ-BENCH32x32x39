@@ -1,0 +1,8 @@
+&version=1.0
+&lmdz
+default    type=tracer  phases=g    hadv=10   vadv=10   parent=air
+H2O                                 hadv=14   vadv=14
+H2O                     phases=ls
+RN,PB
+NewTr1
+NewTr2

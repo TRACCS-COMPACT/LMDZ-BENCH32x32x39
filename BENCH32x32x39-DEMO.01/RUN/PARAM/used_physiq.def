@@ -1,0 +1,608 @@
+ #
+ # Values of seuil_inversion comes from run.def
+ #
+ seuil_inversion =   -8.0000000000000002E-002
+ #
+ # Values of new_oliq comes from run.def
+ #
+ new_oliq = TRUE 
+ #
+ # Values of ok_orodr comes from run.def
+ #
+ ok_orodr = TRUE 
+ #
+ # Values of ok_orolf comes from run.def
+ #
+ ok_orolf = TRUE 
+ #
+ # Values of ok_limitvrai comes from run.def
+ #
+ ok_limitvrai = FALSE 
+ #
+ # Values of iflag_con comes from run.def
+ #
+ iflag_con =            3
+ #
+ # Values of nbapp_cv comes from run.def
+ #
+ nbapp_cv =           48
+ #
+ # Values of iflag_ener_conserv comes from run.def
+ #
+ iflag_ener_conserv =           10
+ #
+ # Values of ok_conserv_q comes from run.def
+ #
+ ok_conserv_q = TRUE 
+ #
+ # Values of cvl_corr comes from run.def
+ #
+ cvl_corr =    1.0000000000000000     
+ #
+ # Values of epmax comes from run.def
+ #
+ epmax =   0.99900000000000000     
+ #
+ # Values of ok_adj_ema comes from run.def
+ #
+ ok_adj_ema = FALSE 
+ #
+ # Values of iflag_clw comes from run.def
+ #
+ iflag_clw =            0
+ #
+ # Values of iflag_ratqs comes from run.def
+ #
+ iflag_ratqs =            4
+ #
+ # Values of iflag_rrtm comes from run.def
+ #
+ iflag_rrtm =            0
+ #
+ # Values of NSW comes from run.def
+ #
+ NSW =            2
+ #
+ # Values of iflag_albedo comes from run.def
+ #
+ iflag_albedo =            1
+ #
+ # Values of iflag_cldcon comes from run.def
+ #
+ iflag_cldcon =            6
+ #
+ # Values of iflag_cld_cv comes from run.def
+ #
+ iflag_cld_cv =            0
+ #
+ # Values of fact_cldcon comes from run.def
+ #
+ fact_cldcon =    1.0000000000000000     
+ #
+ # Values of facttemps comes from run.def
+ #
+ facttemps =    0.0000000000000000     
+ #
+ # Values of ok_newmicro comes from run.def
+ #
+ ok_newmicro = TRUE 
+ #
+ # Values of ratqsbas comes from run.def
+ #
+ ratqsbas =    2.0000000000000000E-003
+ #
+ # Values of ratqshaut comes from run.def
+ #
+ ratqshaut =   0.40000000000000002     
+ #
+ # Values of iflag_sic comes from run.def
+ #
+ iflag_sic =            1
+ #
+ # Values of inertie_sic comes from run.def
+ #
+ inertie_sic =    2000.0000000000000     
+ #
+ # Values of inertie_lic comes from run.def
+ #
+ inertie_lic =    2000.0000000000000     
+ #
+ # Values of inertie_sno comes from run.def
+ #
+ inertie_sno =    350.00000000000000     
+ #
+ # Values of rad_froid comes from run.def
+ #
+ rad_froid =    35.000000000000000     
+ #
+ # Values of rad_chau1 comes from run.def
+ #
+ rad_chau1 =    12.000000000000000     
+ #
+ # Values of rad_chau2 comes from run.def
+ #
+ rad_chau2 =    11.000000000000000     
+ #
+ # Values of iflag_ice_thermo comes from run.def
+ #
+ iflag_ice_thermo =            1
+ #
+ # Values of cdmmax comes from run.def
+ #
+ cdmmax =   0.20000000000000001     
+ #
+ # Values of cdhmax comes from run.def
+ #
+ cdhmax =   0.20000000000000001     
+ #
+ # Values of ksta comes from run.def
+ #
+ ksta =    1.0000000000000000E-010
+ #
+ # Values of ksta_ter comes from run.def
+ #
+ ksta_ter =    9.9999999999999995E-008
+ #
+ # Values of f_ri_cd_min comes from run.def
+ #
+ f_ri_cd_min =    1.0000000000000000E-002
+ #
+ # Values of ok_kzmin comes from run.def
+ #
+ ok_kzmin = FALSE 
+ #
+ # Values of ok_lic_cond comes from run.def
+ #
+ ok_lic_cond = TRUE 
+ #
+ # Values of iflag_pbl comes from run.def
+ #
+ iflag_pbl =           12
+ #
+ # Values of ifl_pbltree comes from run.def
+ #
+ ifl_pbltree =            1
+ #
+ # Values of Cd_frein comes from run.def
+ #
+ Cd_frein =    1.6000000000000000E-002
+ #
+ # Values of iflag_pbl_split comes from run.def
+ #
+ iflag_pbl_split =           10
+ #
+ # Values of iflag_thermals comes from run.def
+ #
+ iflag_thermals =           18
+ #
+ # Values of nsplit_thermals comes from run.def
+ #
+ nsplit_thermals =            1
+ #
+ # Values of alp_bl_k comes from run.def
+ #
+ alp_bl_k =   0.50000000000000000     
+ #
+ # Values of iflag_trig_bl comes from run.def
+ #
+ iflag_trig_bl =            1
+ #
+ # Values of s_trig comes from run.def
+ #
+ s_trig =    12000000.000000000     
+ #
+ # Values of tau_trig_shallow comes from run.def
+ #
+ tau_trig_shallow =         1200
+ #
+ # Values of tau_trig_deep comes from run.def
+ #
+ tau_trig_deep =         1200
+ #
+ # Values of iflag_clos_bl comes from run.def
+ #
+ iflag_clos_bl =            1
+ #
+ # Values of tau_thermals comes from run.def
+ #
+ tau_thermals =    0.0000000000000000     
+ #
+ # Values of iflag_coupl comes from run.def
+ #
+ iflag_coupl =            5
+ #
+ # Values of iflag_clos comes from run.def
+ #
+ iflag_clos =            2
+ #
+ # Values of iflag_wake comes from run.def
+ #
+ iflag_wake =            1
+ #
+ # Values of alp_offset comes from run.def
+ #
+ alp_offset =    0.0000000000000000     
+ #
+ # Values of f_cdrag_ter comes from run.def
+ #
+ f_cdrag_ter =    1.0000000000000000     
+ #
+ # Values of f_cdrag_oce comes from run.def
+ #
+ f_cdrag_oce =    1.0000000000000000     
+ #
+ # Values of f_z0qh_oce comes from run.def
+ #
+ f_z0qh_oce =    1.5500000000000000     
+ #
+ # Values of f_qsat_oce comes from run.def
+ #
+ f_qsat_oce =   0.97999999999999998     
+ #
+ # Values of f_gust_bl comes from run.def
+ #
+ f_gust_bl =   0.84499999999999997     
+ #
+ # Values of f_gust_wk comes from run.def
+ #
+ f_gust_wk =   0.20000000000000001     
+ #
+ # Values of iflag_z0_oce comes from run.def
+ #
+ iflag_z0_oce =            1
+ #
+ # Values of iflag_gusts comes from run.def
+ #
+ iflag_gusts =            2
+ #
+ # Values of min_wind_speed comes from run.def
+ #
+ min_wind_speed =   0.10000000000000001     
+ #
+ # Values of f_rugoro comes from run.def
+ #
+ f_rugoro =    0.0000000000000000     
+ #
+ # Values of iflag_mix comes from run.def
+ #
+ iflag_mix =            1
+ #
+ # Values of iflag_mix_adiab comes from run.def
+ #
+ iflag_mix_adiab =            0
+ #
+ # Values of qqa1 comes from run.def
+ #
+ qqa1 =    1.0000000000000000     
+ #
+ # Values of qqa2 comes from run.def
+ #
+ qqa2 =    0.0000000000000000     
+ #
+ # Values of Fmax comes from run.def
+ #
+ Fmax =   0.65000000000000002     
+ #
+ # Values of tmax_fonte_cv comes from run.def
+ #
+ tmax_fonte_cv =    278.14999999999998     
+ #
+ # Values of sso_gkdrag comes from run.def
+ #
+ sso_gkdrag =   0.59999999999999998     
+ #
+ # Values of sso_gfrcri comes from run.def
+ #
+ sso_gfrcri =   0.69999999999999996     
+ #
+ # Values of sso_gkwake comes from run.def
+ #
+ sso_gkwake =   0.40000000000000002     
+ #
+ # Values of sso_gklift comes from run.def
+ #
+ sso_gklift =   0.10000000000000001     
+ #
+ # Values of ok_gwd_rando comes from run.def
+ #
+ ok_gwd_rando = TRUE 
+ #
+ # Values of gwd_rando_ruwmax comes from run.def
+ #
+ gwd_rando_ruwmax =   0.50000000000000000     
+ #
+ # Values of gwd_rando_sat comes from run.def
+ #
+ gwd_rando_sat =   0.59999999999999998     
+ #
+ # Values of gwd_front_ruwmax comes from run.def
+ #
+ gwd_front_ruwmax =    3.0000000000000000     
+ #
+ # Values of adjust_tropopause comes from run.def
+ #
+ adjust_tropopause = TRUE 
+ #
+ # Values of tau_gl comes from run.def
+ #
+ tau_gl =    5.0000000000000000     
+ #
+ # Values of iflag_alp_wk_cond comes from run.def
+ #
+ iflag_alp_wk_cond =            1
+ #
+ # Values of random_notrig_max comes from run.def
+ #
+ random_notrig_max =   0.98999999999999999     
+ #
+ # Values of ok_adjwk comes from run.def
+ #
+ ok_adjwk = TRUE 
+ #
+ # Values of oliqmax comes from run.def
+ #
+ oliqmax =    1.5000000000000000E-003
+ #
+ # Values of oicemax comes from run.def
+ #
+ oicemax =    1.5000000000000000E-003
+ #
+ # Values of ratqsp0 comes from run.def
+ #
+ ratqsp0 =    45000.000000000000     
+ #
+ # Values of ratqsdp comes from run.def
+ #
+ ratqsdp =    10000.000000000000     
+ #
+ # Values of ok_bad_ecmwf_thermo comes from run.def
+ #
+ ok_bad_ecmwf_thermo = FALSE 
+ #
+ # Values of ok_bug_cv_trac comes from run.def
+ #
+ ok_bug_cv_trac = FALSE 
+ #
+ # Values of fl_cor_ebil comes from run.def
+ #
+ fl_cor_ebil =            1
+ #
+ # Values of addtkeoro comes from run.def
+ #
+ addtkeoro =            2
+ #
+ # Values of alphatkeoro comes from run.def
+ #
+ alphatkeoro =    1.0000000000000000     
+ #
+ # Values of smallscales_tkeoro comes from run.def
+ #
+ smallscales_tkeoro = TRUE 
+ #
+ # Values of stark comes from run.def
+ #
+ stark =   0.33000000000000002     
+ #
+ # Values of alpk comes from run.def
+ #
+ alpk =   0.25000000000000000     
+ #
+ # Values of wdens_ref_o comes from run.def
+ #
+ wdens_ref_o =    1.0000000000000001E-009
+ #
+ # Values of wdens_ref_l comes from run.def
+ #
+ wdens_ref_l =    7.9999999999999998E-012
+ #
+ # Values of coefgw comes from run.def
+ #
+ coefgw =    4.0000000000000000     
+ #
+ # Values of flag_wk_check_trgl comes from run.def
+ #
+ flag_wk_check_trgl = FALSE 
+ #
+ # Values of iflag_wk_check_trgl comes from run.def
+ #
+ iflag_wk_check_trgl =            2
+ #
+ # Values of new_yamada4 comes from run.def
+ #
+ new_yamada4 = TRUE 
+ #
+ # Values of yamada4_ric comes from run.def
+ #
+ yamada4_ric =   0.17999999999999999     
+ #
+ # Values of lmixmin comes from run.def
+ #
+ lmixmin =    0.0000000000000000     
+ #
+ # Values of yamada4_num comes from run.def
+ #
+ yamada4_num =            5
+ #
+ # Values of fact_thermals_ed_dz comes from run.def
+ #
+ fact_thermals_ed_dz =    7.0000000000000007E-002
+ #
+ # Values of iflag_thermals_ed comes from run.def
+ #
+ iflag_thermals_ed =            8
+ #
+ # Values of iflag_thermals_optflux comes from run.def
+ #
+ iflag_thermals_optflux =            0
+ #
+ # Values of iflag_thermals_closure comes from run.def
+ #
+ iflag_thermals_closure =            2
+ #
+ # Values of iflag_evap_prec comes from run.def
+ #
+ iflag_evap_prec =            2
+ #
+ # Values of t_glace_max comes from run.def
+ #
+ t_glace_max =    273.14999999999998     
+ #
+ # Values of t_glace_min comes from run.def
+ #
+ t_glace_min =    243.15000000000001     
+ #
+ # Values of exposant_glace comes from run.def
+ #
+ exposant_glace =   0.50000000000000000     
+ #
+ # Values of iflag_t_glace comes from run.def
+ #
+ iflag_t_glace =            3
+ #
+ # Values of iflag_bergeron comes from run.def
+ #
+ iflag_bergeron =            2
+ #
+ # Values of iflag_fisrtilp_qsat comes from run.def
+ #
+ iflag_fisrtilp_qsat =            4
+ #
+ # Values of iflag_pdf comes from run.def
+ #
+ iflag_pdf =            1
+ #
+ # Values of reevap_ice comes from run.def
+ #
+ reevap_ice = FALSE 
+ #
+ # Values of cld_lc_lsc comes from run.def
+ #
+ cld_lc_lsc =    6.4999999999999997E-004
+ #
+ # Values of cld_lc_con comes from run.def
+ #
+ cld_lc_con =    6.4999999999999997E-004
+ #
+ # Values of cld_tau_lsc comes from run.def
+ #
+ cld_tau_lsc =    900.00000000000000     
+ #
+ # Values of cld_tau_con comes from run.def
+ #
+ cld_tau_con =    900.00000000000000     
+ #
+ # Values of ffallv_lsc comes from run.def
+ #
+ ffallv_lsc =   0.80000000000000004     
+ #
+ # Values of coef_eva comes from run.def
+ #
+ coef_eva =    1.0000000000000000E-004
+ #
+ # Values of iflag_cloudth_vert comes from run.def
+ #
+ iflag_cloudth_vert =            3
+ #
+ # Values of cloudth_vert_alpha comes from run.def
+ #
+ cloudth_vert_alpha =   0.50000000000000000     
+ #
+ # Values of cloudth_vert_alpha_th comes from run.def
+ #
+ cloudth_vert_alpha_th =   0.50000000000000000     
+ #
+ # Values of cdnc_min comes from run.def
+ #
+ cdnc_min =    10.000000000000000     
+ #
+ # Values of rei_min comes from run.def
+ #
+ rei_min =    16.000000000000000     
+ #
+ # Values of rei_max comes from run.def
+ #
+ rei_max =    61.289999999999999     
+ #
+ # Values of iflag_corr_sta comes from run.def
+ #
+ iflag_corr_sta =            4
+ #
+ # Values of alb_vis_sno_lic comes from run.def
+ #
+ alb_vis_sno_lic =   0.95999999999999996     
+ #
+ # Values of alb_nir_sno_lic comes from run.def
+ #
+ alb_nir_sno_lic =   0.68000000000000005     
+ #
+ # Values of cv_flag_feed comes from run.def
+ #
+ cv_flag_feed =            2
+ #
+ # Values of t_top_max comes from run.def
+ #
+ t_top_max =    1000.0000000000000     
+ #
+ # Values of dpbase comes from run.def
+ #
+ dpbase =   -40.000000000000000     
+ #
+ # Values of pbcrit comes from run.def
+ #
+ pbcrit =    150.00000000000000     
+ #
+ # Values of ptcrit comes from run.def
+ #
+ ptcrit =    500.00000000000000     
+ #
+ # Values of sigdz comes from run.def
+ #
+ sigdz =    3.0000000000000001E-003
+ #
+ # Values of spfac comes from run.def
+ #
+ spfac =   0.14999999999999999     
+ #
+ # Values of tau comes from run.def
+ #
+ tau =    8000.0000000000000     
+ #
+ # Values of flag_wb comes from run.def
+ #
+ flag_wb =    50.000000000000000     
+ #
+ # Values of wbmax comes from run.def
+ #
+ wbmax =    2.7999999999999998     
+ #
+ # Values of ok_convstop comes from run.def
+ #
+ ok_convstop = FALSE 
+ #
+ # Values of tau_stop comes from run.def
+ #
+ tau_stop =    15000.000000000000     
+ #
+ # Values of ok_intermittent comes from run.def
+ #
+ ok_intermittent = FALSE 
+ #
+ # Values of ok_optim_yield comes from run.def
+ #
+ ok_optim_yield = TRUE 
+ #
+ # Values of coef_peel comes from run.def
+ #
+ coef_peel =   0.25000000000000000     
+ #
+ # Values of flag_epKEorig comes from run.def
+ #
+ flag_epKEorig =            1
+ #
+ # Values of elcrit comes from run.def
+ #
+ elcrit =    2.9999999999999997E-004
+ #
+ # Values of tlcrit comes from run.def
+ #
+ tlcrit =   -55.000000000000000     

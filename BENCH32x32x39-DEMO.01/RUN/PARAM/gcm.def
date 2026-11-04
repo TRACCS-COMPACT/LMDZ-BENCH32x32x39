@@ -1,0 +1,57 @@
+## $Id: gcm.def 1403 2010-07-01 09:02:53Z fairhead $
+## number of dynamical time steps per day (must be a multiple of iperiod)      
+day_step=480
+## Apply a Matsuno step every iperiod dynamical step
+iperiod=5
+## Apply dissipation every idissip dynamical steps
+idissip=5
+## Dissipation operator to use (star or non-star)
+lstardis=y
+## iterate lateral dissipation operator gradiv nitergdiv times
+nitergdiv=1
+## iterate lateral dissipation operator nxgradrot nitergrot times
+nitergrot=2
+## iterate lateral dissipation operator divgrad niterh times        
+niterh=2
+## time scale (s) for shortest wavelengths for u,v (gradiv)
+tetagdiv=5400.
+## time scale (s) for shortest wavelengths for u,v (nxgradrot)
+tetagrot=5400.
+## time scale (s) for shortest wavelengths for h (divgrad)
+tetatemp=5400.
+## coefficient for gamdissip                                            
+coefdis=0.
+## time marching scheme (Matsuno:y or Matsuno-leapfrog:n) 
+purmats=n
+
+## with or without physics
+## 0: no physics (e.g. Shallow Water mode)
+## 1: with physics (e.g. phylmd physics package)
+## 2: with newtonian nudging in the dynamics
+iflag_phys=1
+## with or without start file (start.nc, startphy.nc) ?
+## (without start file, initizaliation by iniacademic in the dynamics)
+read_start=y
+## call physics every iphysiq dynamical steps (relevant only if iflag_phys=1)
+iphysiq=5
+
+## longitude in degrees of the center of the zoom                               
+clon=0.
+## latitude in degrees of the center of the zoom                                
+clat=0.
+## enhancement factor of zoom, along longitudes
+grossismx=1.0
+## enhancement factor of zoom, along latitudes
+grossismy=1.0
+## Use an hyperbolic function f(y) if .true., else use a sine
+fxyhypb=y
+## extention along longitudes of zoom region (fraction of global domain)
+dzoomx=0.15
+## extention along latitudes of zoom region (fraction of global domain)
+dzoomy=0.15
+## X stiffness of the zoom along longitudes
+taux=3.
+## Y stiffness of the zoom along latitudes
+tauy=3.
+## Fonction  f(y) as y = Sin(latitude) if = .true. ,  else  y = latitude
+ysinus=y

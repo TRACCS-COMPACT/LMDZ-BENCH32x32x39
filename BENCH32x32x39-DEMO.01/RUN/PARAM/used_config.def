@@ -1,0 +1,4 @@
+ #
+ # Values of type_ocean comes from run.def
+ #
+ type_ocean = force

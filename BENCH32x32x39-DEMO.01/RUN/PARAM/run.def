@@ -1,0 +1,35 @@
+# $Id: run.def 1403 2010-07-01 09:02:53Z fairhead $
+#
+## General configurations file
+## 
+INCLUDEDEF=physiq.def
+INCLUDEDEF=gcm.def
+INCLUDEDEF=vert.def
+INCLUDEDEF=orchidee.def
+INCLUDEDEF=config.def
+## Calendar type
+## possible values: earth_360d (defaut), earth_365d, earth_366d
+calend=earth_360d
+## Day of initial state ( = 350  if 20 December for instance )
+dayref=1
+##  Year of initial state (  with 4 digits  )
+anneeref=1980
+## Number of days to run the simulation for
+nday=3
+## Reset the initial date
+raz_date=1
+## Writting period of control output variables (in dynamical steps)
+iconser=30
+## writting period of history files (in days)
+iecri=1
+## flag for dynzon output (zonal diagnostics in the dynamics)
+ok_dynzon=n
+## storage period of dynzon file (in days)
+periodav= 30.
+## compute and adjust core loads (only valid in parallel)
+adjust=n
+## activate fft filter
+use_filtre_fft=n
+## control (text outputs) print level
+prt_level=0
+ok_sync=y

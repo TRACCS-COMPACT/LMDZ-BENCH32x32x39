@@ -1,0 +1,84 @@
+ #
+ # Values of ok_guide comes from run.def
+ #
+ ok_guide = TRUE 
+ #
+ # Values of guide_u comes from run.def
+ #
+ guide_u = TRUE 
+ #
+ # Values of guide_v comes from run.def
+ #
+ guide_v = FALSE 
+ #
+ # Values of guide_T comes from run.def
+ #
+ guide_T = FALSE 
+ #
+ # Values of guide_P comes from run.def
+ #
+ guide_P = FALSE 
+ #
+ # Values of guide_Q comes from run.def
+ #
+ guide_Q = FALSE 
+ #
+ # Values of guide_teta comes from run.def
+ #
+ guide_teta = FALSE 
+ #
+ # Values of guide_add comes from run.def
+ #
+ guide_add = TRUE 
+ #
+ # Values of tau_min_u comes from run.def
+ #
+ tau_min_u =    1.0000000000000000     
+ #
+ # Values of tau_max_u comes from run.def
+ #
+ tau_max_u =    1.0000000000000000     
+ #
+ # Values of tau_min_v comes from run.def
+ #
+ tau_min_v =    1.0000000000000000     
+ #
+ # Values of tau_max_v comes from run.def
+ #
+ tau_max_v =    1.0000000000000000     
+ #
+ # Values of tau_min_T comes from run.def
+ #
+ tau_min_T =    1.0000000000000000     
+ #
+ # Values of tau_max_T comes from run.def
+ #
+ tau_max_T =    1.0000000000000000     
+ #
+ # Values of guide_BL comes from run.def
+ #
+ guide_BL = FALSE 
+ #
+ # Values of guide_sav comes from run.def
+ #
+ guide_sav = FALSE 
+ #
+ # Values of guide_plevs comes from run.def
+ #
+ guide_plevs =            2
+ #
+ # Values of convert_Pa comes from run.def
+ #
+ convert_Pa = FALSE 
+ #
+ # Values of ini_anal comes from run.def
+ #
+ ini_anal = FALSE 
+ #
+ # Values of guide_invertp comes from run.def
+ #
+ guide_invertp = FALSE 
+ #
+ # Values of guide_inverty comes from run.def
+ #
+ guide_inverty = FALSE 

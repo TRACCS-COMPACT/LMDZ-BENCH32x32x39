@@ -1,0 +1,6 @@
+##  With or without strato
+ok_strato=y 
+#  Sponge layer applied over layers from the top of the model down to pressures 100 times less
+iflag_top_bound=2
+#  coefficient for the sponge layer (relaxation frequency at top layer)
+tau_top_bound=5.e-5

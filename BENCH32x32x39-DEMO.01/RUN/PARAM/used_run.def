@@ -1,0 +1,290 @@
+ # 
+ # This file is linked to the following files :
+ # 
+ INCLUDEDEF = physiq.def
+ INCLUDEDEF = gcm.def
+ INCLUDEDEF = vert.def
+ INCLUDEDEF = orchidee.def
+ INCLUDEDEF = config.def
+ INCLUDEDEF = guide.def
+ # 
+ #
+ # Values of lunout are all defaults.
+ #
+ lunout =            6
+ #
+ # Values of adjust comes from run.def
+ #
+ adjust = FALSE 
+ #
+ # Values of itaumax are all defaults.
+ #
+ itaumax =            0
+ #
+ # Values of prt_level comes from run.def
+ #
+ prt_level =            0
+ #
+ # Values of planet_type are all defaults.
+ #
+ planet_type = earth
+ #
+ # Values of calend comes from run.def
+ #
+ calend = earth_360d
+ #
+ # Values of dayref comes from run.def
+ #
+ dayref =            1
+ #
+ # Values of anneeref comes from run.def
+ #
+ anneeref =         1980
+ #
+ # Values of raz_date comes from run.def
+ #
+ raz_date =            1
+ #
+ # Values of resetvarc are all defaults.
+ #
+ resetvarc = FALSE 
+ #
+ # Values of nday comes from run.def
+ #
+ nday =            3
+ #
+ # Values of starttime are all defaults.
+ #
+ starttime =    0.0000000000000000     
+ #
+ # Values of nsplit_phys are all defaults.
+ #
+ nsplit_phys =            1
+ #
+ # Values of iapp_tracvl are all defaults.
+ #
+ iapp_tracvl =            5
+ #
+ # Values of iconser comes from run.def
+ #
+ iconser =           30
+ #
+ # Values of iecri comes from run.def
+ #
+ iecri =            1
+ #
+ # Values of periodav comes from run.def
+ #
+ periodav =    30.000000000000000     
+ #
+ # Values of output_grads_dyn are all defaults.
+ #
+ output_grads_dyn = FALSE 
+ #
+ # Values of dissip_period are all defaults.
+ #
+ dissip_period =            0
+ #
+ # Values of dissip_factz are all defaults.
+ #
+ dissip_factz =    4.0000000000000000     
+ #
+ # Values of dissip_deltaz are all defaults.
+ #
+ dissip_deltaz =    10.000000000000000     
+ #
+ # Values of dissip_zref are all defaults.
+ #
+ dissip_zref =    30.000000000000000     
+ #
+ # Values of maxlatfilter are all defaults.
+ #
+ maxlatfilter =   -1.0000000000000000     
+ #
+ # Values of ngroup are all defaults.
+ #
+ ngroup =            3
+ #
+ # Values of mode_top_bound are all defaults.
+ #
+ mode_top_bound =            3
+ #
+ # Values of ip_ebil_dyn are all defaults.
+ #
+ ip_ebil_dyn =            0
+ #
+ # Values of offline are all defaults.
+ #
+ offline = FALSE 
+ #
+ # Values of type_trac are all defaults.
+ #
+ type_trac = lmdz
+ #
+ # Values of adv_qsat_liq are all defaults.
+ #
+ adv_qsat_liq = FALSE 
+ #
+ # Values of ok_dynzon comes from run.def
+ #
+ ok_dynzon = FALSE 
+ #
+ # Values of ok_dyn_ins are all defaults.
+ #
+ ok_dyn_ins = FALSE 
+ #
+ # Values of ok_dyn_ave are all defaults.
+ #
+ ok_dyn_ave = FALSE 
+ #
+ # Values of ok_dyn_xios are all defaults.
+ #
+ ok_dyn_xios = FALSE 
+ #
+ # Values of use_filtre_fft comes from run.def
+ #
+ use_filtre_fft = FALSE 
+ #
+ # Values of use_mpi_alloc are all defaults.
+ #
+ use_mpi_alloc = FALSE 
+ #
+ # Values of vert_prof_dissip are all defaults.
+ #
+ vert_prof_dissip =            1
+ #
+ # Values of ok_gradsfile are all defaults.
+ #
+ ok_gradsfile = FALSE 
+ #
+ # Values of ok_limit are all defaults.
+ #
+ ok_limit = TRUE 
+ #
+ # Values of ok_etat0 are all defaults.
+ #
+ ok_etat0 = TRUE 
+ #
+ # Values of read_orop are all defaults.
+ #
+ read_orop = FALSE 
+ #
+ # Values of omp_chunk are all defaults.
+ #
+ omp_chunk =           40
+ #
+ # Values of mpi_buffer_size are all defaults.
+ #
+ mpi_buffer_size =    104857600
+ #
+ # Values of tnateq1 are all defaults.
+ #
+ tnateq1 = TRUE 
+ #
+ # Values of disvert_type are all defaults.
+ #
+ disvert_type =            1
+ #
+ # Values of pressure_exner are all defaults.
+ #
+ pressure_exner = TRUE 
+ #
+ # Values of vert_sampling are all defaults.
+ #
+ vert_sampling = strato
+ #
+ # Values of dsigmin are all defaults.
+ #
+ dsigmin =   0.29999999999999999     
+ #
+ # Values of debug are all defaults.
+ #
+ debug = FALSE 
+ #
+ # Values of slab_hdiff are all defaults.
+ #
+ slab_hdiff = FALSE 
+ #
+ # Values of slab_ekman are all defaults.
+ #
+ slab_ekman =            0
+ #
+ # Values of guide_hr are all defaults.
+ #
+ guide_hr = TRUE 
+ #
+ # Values of guide_zon are all defaults.
+ #
+ guide_zon = FALSE 
+ #
+ # Values of tau_min_Q are all defaults.
+ #
+ tau_min_Q =    2.0000000000000000E-002
+ #
+ # Values of tau_max_Q are all defaults.
+ #
+ tau_max_Q =    10.000000000000000     
+ #
+ # Values of tau_min_P are all defaults.
+ #
+ tau_min_P =    2.0000000000000000E-002
+ #
+ # Values of tau_max_P are all defaults.
+ #
+ tau_max_P =    10.000000000000000     
+ #
+ # Values of gamma4 are all defaults.
+ #
+ gamma4 = FALSE 
+ #
+ # Values of plim_guide_BL are all defaults.
+ #
+ plim_guide_BL =    85000.000000000000     
+ #
+ # Values of iguide_sav are all defaults.
+ #
+ iguide_sav =            4
+ #
+ # Values of guide_reg are all defaults.
+ #
+ guide_reg = FALSE 
+ #
+ # Values of lat_min_g are all defaults.
+ #
+ lat_min_g =   -90.000000000000000     
+ #
+ # Values of lat_max_g are all defaults.
+ #
+ lat_max_g =    90.000000000000000     
+ #
+ # Values of lon_min_g are all defaults.
+ #
+ lon_min_g =   -180.00000000000000     
+ #
+ # Values of lon_max_g are all defaults.
+ #
+ lon_max_g =    180.00000000000000     
+ #
+ # Values of tau_lat are all defaults.
+ #
+ tau_lat =    5.0000000000000000     
+ #
+ # Values of tau_lon are all defaults.
+ #
+ tau_lon =    5.0000000000000000     
+ #
+ # Values of iguide_read are all defaults.
+ #
+ iguide_read =            4
+ #
+ # Values of iguide_int are all defaults.
+ #
+ iguide_int =            4
+ #
+ # Values of guide_modele are all defaults.
+ #
+ guide_modele = FALSE 
+ #
+ # Values of guide_2D are all defaults.
+ #
+ guide_2D = FALSE 

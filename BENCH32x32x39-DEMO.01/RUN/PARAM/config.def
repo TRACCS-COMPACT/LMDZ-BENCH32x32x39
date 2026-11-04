@@ -1,0 +1,150 @@
+##############################################################################
+# PARAMETERS ET CONFIGURATION KEYS FOR LMDZ
+##############################################################################
+# D: Default value
+#
+# OUTPUTS
+#*********************
+OK_journe=y
+OK_mensuel=y
+ok_hf=y
+OK_instan=n
+ok_LES=n
+#ok_regdyn : y/n compute (or not) dynamical regimes over pre-defined regions
+ok_regdyn=y
+# To adapt as the following cases when it will be possible with libIGCM
+# Definition of files to output and their properties/contents
+phys_out_filekeys=       y       y       y       y       n
+phys_out_filenames=      histmth histday histhf  histins histLES
+phys_out_filelevels=     10      5       4       4       4
+phys_out_filetypes=      ave(X)  ave(X)  ave(X) inst(X) inst(X)
+phys_out_filetimesteps=   5day   1day    2hr     6hr     6hr
+
+#
+# Coupling with other modules
+#******************************
+#Couling with ocean (D:forced atmosphere mode)
+type_ocean=force
+version_ocean=nemo
+#with or without orchidee (D:n)
+VEGET=n
+#type_run=AMIP, ENSP, clim (D:AMIP)
+type_run=CLIM
+##  Use the soil Model  or not               
+soil_model=y
+
+#Radiative transfer code
+#**************************
+# Activate/deactivate the radiative code
+# 0 : no radiation. 1: radiation actiaved (D=1)
+iflag_radia=1
+## Number of daily calls to radiation                 
+nbapp_rad=24
+
+# Orbital/geological era parameters
+#######################################
+#Orbital parameters
+#excentricity
+R_ecc=0.016715
+#equinox
+R_peri=102.7
+# inclination
+R_incl=23.441
+#Solar constant
+solaire=1366.0896
+##  Added factor on albedo
+pmagic=0.008
+#
+# Greenhouse gaz concentrations
+#######################################
+# gaz concentration (co2 ch4   n2o  cfc11 cfc12)
+#                  (D: 348. 1650. 306.  280.  484.)
+co2_ppm=0.36886500E+03
+#RCO2=co2_ppm * 1.0e-06  * 44.011/28.97= 5.286789092164308E-04
+CH4_ppb=0.17510225E+04
+#RCH4=1.65E-06* 16.043/28.97= 9.137366240938903E-07
+N2O_ppb=0.31585000E+03
+#RN2O=306.E-09* 44.013/28.97= 4.648939592682085E-07
+CFC11_ppt=5.18015181E+01
+#RCFC11=280.E-12* 137.3686/28.97= 1.327690990680013E-09
+CFC12_ppt=0.99862742E+03
+#RCFC12=484.E-12* 120.9140/28.97= 2.020102726958923E-09
+#
+# Parameters for direct and indirect "aerosol" effects
+#######################################################
+### ok_ade=y/n   flag Aerosol direct effect
+ok_ade=n
+### ok_aie=y/n   flag Aerosol indirect effect
+ok_aie=n
+### aer_type =   Aerosol variation type : actuel / preind / scenario / annuel
+aer_type=actuel
+###  type of coupled aerosol =1 (default) =2 => bc  only =3 => pom only =4 => seasalt only =5 => dust only =6 => all aerosol
+flag_aerosol=0
+### bl95_b0 =    Parameter in CDNC-maer link (Boucher&Lohmann 1995)
+bl95_b0=1.7
+### bl95_b1 =    Parameter in CDNC-maer link (Boucher&Lohmann 1995)
+bl95_b1=0.2
+#
+# Ozone parameters
+#######################################
+# Allowed values are 0, 1 and 2
+# 0: do not read an ozone climatology
+# 1: read a single ozone climatology that will be used day and night
+# 2: read two ozone climatologies, the average day and night climatology and the daylight climatology
+read_climoz=0
+#
+# COSP simulator parameters (CFMIP Observational Simulator Package)
+#######################################
+### ok_cosp=y/n flag simulateur COSP
+ok_cosp=n
+### freq_COSP = COSP call frequency in seconds
+freq_COSP=10800.
+### ok_mensuelCOSP=y/n for monthly output COSP file histmthCOSP.nc, =n no histmthCOSP.nc file
+ok_mensuelCOSP=y
+### ok_journeCOSP=y/n for daily output COSP file journalier histdayCOSP.nc, =n no histdayCOSP.nc file
+ok_journeCOSP=y
+### ok_hfCOSP=y/n, for high-frequency output COSP file histhfCOSP.nc, =n no histhfCOSP.nc file
+ok_hfCOSP=n
+#
+# ISCCP simulator parameters
+#######################################
+### ok_isccp=y/n flag ISCCP simulator
+ok_isccp=n
+### top_height =  cloud calculation option of the simulator when using 
+###              IR and/or VIS data and the ISCCP-D1 algorithm
+# - top_height = 1 -> IR-VIS algorithm
+# - top_height = 2 -> similar to 1, mbut "ptop(ibox)=pfull(ilev)"
+# - top_height = 3 -> IR algorithm
+top_height = 1
+### overlap =    Vertical overlap hypothesis used by ISCCP
+# - overlap=1    Max overlap
+# - overlap=2    Random overlap
+# - overlap=3    Max/Random overlap
+overlap = 3
+#
+
+lag_cdrh=-1,-1,-1,10,10,10
+flag_tsol=-1,-1,-1,10,10,10
+flag_u10m=-1,-1,-1,10,10,10
+flag_v10m=-1,-1,-1,10,10,10
+flag_t2m=-1,-1,-1,10,10,10
+flag_q2m=-1,-1,-1,10,10,10
+flag_aire=-1,-1,-1,10,10,10
+flag_SWdnTOA=-1,-1,-1,10,10,10
+flag_SWdnSFC=-1,-1,-1,10,10,10
+flag_SWupSFC=-1,-1,-1,10,10,10
+flag_LWupTOA=-1,-1,-1,10,10,10
+flag_LWdnSFC=-1,-1,-1,10,10,10
+flag_LWupSFC=-1,-1,-1,10,10,10
+flag_slp=-1,-1,-1,10,10,10
+flag_tsol=-1,-1,-1,10,10,10
+flag_cldt=-1,-1,-1,10,10,10
+flag_topl=-1,-1,-1,10,10,10
+flag_SWupTOA=-1,-1,-1,10,10,10
+flag_LWupTOA=-1,-1,-1,10,10,10
+flag_flat=-1,-1,-1,10,10,10
+flag_sens=-1,-1,-1,10,10,10
+flag_precip=-1,-1,-1,10,10,10
+
+### XIOS outputs
+ok_all_xml=y

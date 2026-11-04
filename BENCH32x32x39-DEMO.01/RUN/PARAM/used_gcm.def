@@ -1,0 +1,96 @@
+ #
+ # Values of day_step comes from run.def
+ #
+ day_step =          480
+ #
+ # Values of iperiod comes from run.def
+ #
+ iperiod =            5
+ #
+ # Values of lstardis comes from run.def
+ #
+ lstardis = TRUE 
+ #
+ # Values of nitergdiv comes from run.def
+ #
+ nitergdiv =            1
+ #
+ # Values of nitergrot comes from run.def
+ #
+ nitergrot =            2
+ #
+ # Values of niterh comes from run.def
+ #
+ niterh =            2
+ #
+ # Values of tetagdiv comes from run.def
+ #
+ tetagdiv =    5400.0000000000000     
+ #
+ # Values of tetagrot comes from run.def
+ #
+ tetagrot =    5400.0000000000000     
+ #
+ # Values of tetatemp comes from run.def
+ #
+ tetatemp =    5400.0000000000000     
+ #
+ # Values of coefdis comes from run.def
+ #
+ coefdis =    0.0000000000000000     
+ #
+ # Values of purmats comes from run.def
+ #
+ purmats = FALSE 
+ #
+ # Values of read_start comes from run.def
+ #
+ read_start = TRUE 
+ #
+ # Values of iflag_phys comes from run.def
+ #
+ iflag_phys =            1
+ #
+ # Values of iphysiq comes from run.def
+ #
+ iphysiq =            5
+ #
+ # Values of clon comes from run.def
+ #
+ clon =    0.0000000000000000     
+ #
+ # Values of clat comes from run.def
+ #
+ clat =    0.0000000000000000     
+ #
+ # Values of grossismx comes from run.def
+ #
+ grossismx =    1.0000000000000000     
+ #
+ # Values of grossismy comes from run.def
+ #
+ grossismy =    1.0000000000000000     
+ #
+ # Values of fxyhypb comes from run.def
+ #
+ fxyhypb = TRUE 
+ #
+ # Values of dzoomx comes from run.def
+ #
+ dzoomx =   0.14999999999999999     
+ #
+ # Values of dzoomy comes from run.def
+ #
+ dzoomy =   0.14999999999999999     
+ #
+ # Values of taux comes from run.def
+ #
+ taux =    3.0000000000000000     
+ #
+ # Values of tauy comes from run.def
+ #
+ tauy =    3.0000000000000000     
+ #
+ # Values of ysinus comes from run.def
+ #
+ ysinus = TRUE 
