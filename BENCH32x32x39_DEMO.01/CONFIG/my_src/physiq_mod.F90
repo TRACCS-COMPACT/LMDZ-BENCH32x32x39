@@ -2504,18 +2504,16 @@ END IF
        nstep = NINT( daysec / phys_tstep )
        nyear = year_len * nstep
        istep = MOD( days_elapsed*nstep + INT(jh_cur*nstep), nyear ) + 1
-       nn_cosday = COS( 2.*pi*istep/nyear ) * SQRT(2.)
-       nn_sinday = SIN( 2.*pi*istep/nyear ) * SQRT(2.)
+       cosday = COS( 2.*pi*istep/nyear ) * SQRT(2.)
        !
        ! Send
        CALL send_to_python_phys('u', u_seri, itap)
        CALL send_to_python_phys('v', v_seri, itap)
-       CALL send_to_python_phys('tpot', theta, itap)
-       CALL send_to_python_phys('pres', pplay, itap)
-       CALL send_to_python_phys('psol', paprs, itap)
-       CALL send_to_python_phys('topo', pphis / 9.81, itap)
-       CALL send_to_python_cpl('cos_day', nn_cosday, itap)
-       CALL send_to_python_cpl('sin_day', nn_sinday, itap)
+       CALL send_to_python_cpl('cosday', cosday, itap)
+       ! Receive
+       CALL receive_from_python('u100', py_du_phys, itap)
+       CALL receive_from_python('v100', py_du_phys, itap)
+       CALL receive_from_python('day100', py_cosday, itap)
     END IF
     ! +++++++++++++ 
 
@@ -5930,17 +5928,6 @@ END IF
         call output_physiqex(debut,jD_eq,pdtphys,presnivs,paprs,u,v,t,qx,cldfra,0.*t,0.*t,0.*t,pbl_tke,theta)
     endif
 
-    ! +++ Python coupling: Receive results +++
-    IF (lk_pycpl) THEN
-       CALL receive_from_python_phys('du', py_du_phys, itap)
-       CALL receive_from_python_phys('dv', py_dv_phys, itap)
-       !
-       ! Swap physics band -> caldyn grid (flat ij convention),
-       ! ready for use with unat2/vnat2 in guide_main)
-       CALL phys_to_dyn(py_du_phys, py_dv_phys, py_du_dyn, py_dv_dyn)
-       CALL pyfld_swap_ph2cd(py_du_dyn, py_dv_dyn, py_du_caldyn, py_dv_caldyn)
-    END IF
-    ! +++++++++++++ 
 
     !====================================================================
     ! Arret du modele apres hgardfou en cas de detection d'un

@@ -19,7 +19,7 @@ MODULE pyfld
    !!----------------------------------------------------------------------
    !!                   Fields on the coupling grid
    !!----------------------------------------------------------------------
-   REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:,:)  :: nn_cosday, nn_sinday
+   REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:,:)  :: cosday
    !REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:,:)  :: template_cpl
 
    !!----------------------------------------------------------------------
@@ -33,8 +33,6 @@ MODULE pyfld
    !!----------------------------------------------------------------------
    !!                   Fields on the dynamic grid
    !!----------------------------------------------------------------------
-   REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:,:) :: py_du_dyn, py_dv_dyn
-   REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:)   :: py_du_caldyn, py_dv_caldyn
    !REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:)  :: template_u_dyn, template_v_dyn
 
    !!----------------------------------------------------------------------
@@ -59,7 +57,7 @@ CONTAINS
       IF ( lk_pycpl ) THEN
  !$OMP MASTER
          ! Coupling grid
-         ALLOCATE( nn_cosday(nbp_lon,jj_nb,nbp_lev), nn_sinday(nbp_lon,jj_nb,nbp_lev) )
+         ALLOCATE( cosday(nbp_lon,jj_nb,nbp_lev) )
          !ALLOCATE( template_cpl(nbp_lon,jj_nb,nbp_lev) )
  !$OMP END MASTER
          !
@@ -70,15 +68,8 @@ CONTAINS
          !
  !$OMP MASTER
          ! Dynamics : physics band
-         ALLOCATE( py_du_dyn(iip1, distrib_physic%jjb_u:distrib_physic%jje_u, llm) )
-         ALLOCATE( py_dv_dyn(iip1, distrib_physic%jjb_v:distrib_physic%jje_v, llm) )
          ! Dynamics : caldyn band
-         ALLOCATE( py_du_caldyn(distrib_caldyn%ijb_u:distrib_caldyn%ije_u, llm) )
-         ALLOCATE( py_dv_caldyn(distrib_caldyn%ijb_v:distrib_caldyn%ije_v, llm) )
-         py_du_dyn = 0.0
-         py_dv_dyn = 0.0
-         py_du_caldyn = 0.0
-         py_dv_caldyn = 0.0
+         ! ===
          ! Shared OMP working buffers
          ALLOCATE( zbuf_u(klon_mpi, llm), zbuf_v(klon_mpi, llm) )
          ALLOCATE( zbuf_u2(1-iim:klon_mpi+iim, llm), zbuf_v2(1-iim:klon_mpi+iim, llm) )
@@ -104,9 +95,7 @@ CONTAINS
  !$OMP MASTER
       ! Free memory
       IF ( lk_pycpl ) THEN
-         DEALLOCATE( nn_cosday, nn_sinday )
-         DEALLOCATE( py_du_dyn, py_dv_dyn )
-         DEALLOCATE( py_du_caldyn, py_dv_caldyn )
+         DEALLOCATE( cosday )
          DEALLOCATE( zbuf_u, zbuf_v, zbuf_u2, zbuf_v2 )
          !DEALLOCATE( template_phys, template_dyn)
       END IF

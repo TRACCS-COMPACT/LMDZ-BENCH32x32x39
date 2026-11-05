@@ -22,7 +22,7 @@ def earth_info():
     tunnel_config = list()
     tunnel_config.append( { 'label' : 'TO_EARTH', \
                             'grids' : { 'lmdz' :  {'npts' : (32,33)} }, \
-                            'exchs' : [ {'freq' : step, 'grd' : 'lmdz', 'lvl' : 39, 'in' : ['u','v'], 'out' : ['du','dv'] } ] }
+                            'exchs' : [ {'freq' : step, 'grd' : 'lmdz', 'lvl' : 39, 'in' : ['u','v','arr'], 'out' : ['u100','v100','arr100'] } ] }
                         )
 
     return tunnel_config, step, ite_end, ite_0
@@ -68,7 +68,7 @@ def production():
     @eophis.all_in_all_out(geo_model=earth, step=step, niter=niter)
     def loop_core(**inputs):
         outputs = {}
-        outputs['du'], outputs['dv']  = add_100(inputs['u']), add_100(inputs['v'])
+        outputs['u100'], outputs['v100'], outputs['arr100']  = add_100(inputs['u']), add_100(inputs['v']), add_100(inputs['arr'])
         return outputs
 
     #  Run

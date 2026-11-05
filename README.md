@@ -16,6 +16,11 @@ Purpose of the experiment is to provide templates for realistic hybrid Python-LM
 ### Compilation
 
 - LMDZ6 trunk [5891](http://svn.lmd.jussieu.fr/LMDZ/LMDZ6/trunk/) patched with [TRACCS-COMPACT Patch](https://github.com/TRACCS-COMPACT/Patches-LMDZ) and local `CONFIG/my_src` sources.
+```bash
+wget http://lmdz.lmd.jussieu.fr/pub/install_lmdz.sh
+chmod +x install_lmdz.sh
+./install_lmdz.sh -name LMDZ6_ML -netcdf 0 -parallel mpi_omp -veget none -rad oldrad
+```
 
 - Code Compilation manager : none, use `compile.sh` script provided in `CONFIG`
 
@@ -23,19 +28,15 @@ Purpose of the experiment is to provide templates for realistic hybrid Python-LM
 ### Python
 
 - Eophis version : [v1.1.0](https://github.com/alexis-barge/eophis/tree/v1.1.0)
-- **01** dependencies:
-  ```bash
-  cd BENCH32x32x39-DEMO.01/INFERENCES/
-  pip install -r requirements.txt
-  ```
-- **K26** dependencies:
-  ```bash
-  cd BENCH32x32x39-DEMO.K26/INFERENCES/
-  pip install -r requirements.txt
-  ```
+- **01** dependencies: none
 
 
 ### Run
+
+- BENCH test case : 
+```bash
+
+```
 
 - LMDZ Production Manager : None, use ``job.ksh`` in ``RUN``
 
