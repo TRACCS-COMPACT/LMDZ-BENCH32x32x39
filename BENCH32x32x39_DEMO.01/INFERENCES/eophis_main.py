@@ -20,7 +20,7 @@ def earth_info():
     ite_end = int(24*3600*nday / step)
 
     tunnel_config = list()
-    tunnel_config.append( { 'label' : 'TO_EARTH', \
+    tunnel_config.append( { 'label' : 'TO_LMDZ', \
                             'grids' : { 'lmdz' :  {'npts' : (32,33)} }, \
                             'exchs' : [ {'freq' : step, 'grd' : 'lmdz', 'lvl' : 39, 'in' : ['u','v','cosday'], 'out' : ['u100','v100','day100'] } ] }
                         )
