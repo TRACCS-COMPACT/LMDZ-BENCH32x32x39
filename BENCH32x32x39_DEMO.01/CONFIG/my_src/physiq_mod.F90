@@ -2511,9 +2511,9 @@ END IF
        CALL send_to_python_phys('v', v_seri, itap)
        CALL send_to_python_cpl('cosday', cosday, itap)
        ! Receive
-       CALL receive_from_python('u100', py_du_phys, itap)
-       CALL receive_from_python('v100', py_du_phys, itap)
-       CALL receive_from_python('day100', py_cosday, itap)
+       CALL receive_from_python_phys('u100', py_du_phys, itap)
+       CALL receive_from_python_phys('v100', py_du_phys, itap)
+       CALL receive_from_python_cpl('day100', py_cosday, itap)
     END IF
     ! +++++++++++++ 
 

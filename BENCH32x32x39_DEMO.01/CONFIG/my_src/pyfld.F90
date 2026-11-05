@@ -19,7 +19,7 @@ MODULE pyfld
    !!----------------------------------------------------------------------
    !!                   Fields on the coupling grid
    !!----------------------------------------------------------------------
-   REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:,:)  :: cosday
+   REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:,:)  :: cosday, py_cosday
    !REAL, PUBLIC, ALLOCATABLE, SAVE, DIMENSION(:,:,:)  :: template_cpl
 
    !!----------------------------------------------------------------------
@@ -57,7 +57,7 @@ CONTAINS
       IF ( lk_pycpl ) THEN
  !$OMP MASTER
          ! Coupling grid
-         ALLOCATE( cosday(nbp_lon,jj_nb,nbp_lev) )
+         ALLOCATE( cosday(nbp_lon,jj_nb,nbp_lev), py_cosday(nbp_lon,jj_nb,nbp_lev) )
          !ALLOCATE( template_cpl(nbp_lon,jj_nb,nbp_lev) )
  !$OMP END MASTER
          !
@@ -95,7 +95,7 @@ CONTAINS
  !$OMP MASTER
       ! Free memory
       IF ( lk_pycpl ) THEN
-         DEALLOCATE( cosday )
+         DEALLOCATE( cosday, py_cosday )
          DEALLOCATE( zbuf_u, zbuf_v, zbuf_u2, zbuf_v2 )
          !DEALLOCATE( template_phys, template_dyn)
       END IF
