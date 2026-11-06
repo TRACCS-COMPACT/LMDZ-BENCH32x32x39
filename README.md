@@ -5,7 +5,7 @@
 
 ## Context and Motivation
 
-Purpose of the experiment is to couple LMDZ BENCH test case with Python toolboxes to compute online diagnostics using formulations not implemented in LMDZ. Internal and external computed fields are written in an output file with the LMDZ output system (XIOS).
+Purpose of the experiment is to couple LMDZ BENCH test case with Python toolboxes for online diagnostics using formulations not implemented in LMDZ. Externally computed fields are written in an output file with the LMDZ output system (XIOS).
 
 
 #### Variations
@@ -15,7 +15,7 @@ Purpose of the experiment is to couple LMDZ BENCH test case with Python toolboxe
 
 ### Compilation
 
-- LMDZ6 trunk [5891](http://svn.lmd.jussieu.fr/LMDZ/LMDZ6/trunk/) patched with [TRACCS-COMPACT Patch](https://github.com/TRACCS-COMPACT/Patches-LMDZ) and local `CONFIG/my_src` sources.
+- [LMDZ6](http://svn.lmd.jussieu.fr/LMDZ/LMDZ6/trunk/) patched with [TRACCS-COMPACT Patch](https://github.com/TRACCS-COMPACT/Patches-LMDZ) and local `CONFIG/my_src` sources.
 ```bash
 wget http://lmdz.lmd.jussieu.fr/pub/install_lmdz.sh
 chmod +x install_lmdz.sh
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 - No Post-Process libraries required
 
-- Plotting : Python script `plots_res.py` in `POSTPROCESS`
+- Plotting : Python script `plot_res.py` in `POSTPROCESS`
 ```bash
 cd LMDZ-BENCH32x32x39/BENCH32x32x39.DJ08/POSTPROCESS
 pip install -r requirements.txt
