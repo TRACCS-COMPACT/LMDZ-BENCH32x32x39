@@ -14,15 +14,17 @@ def earth_info():
     with open("run.def") as f:
         d = dict(line.strip().split("=", 1) for line in f if "=" in line and not line.lstrip().startswith("#"))
         nday = int(d["nday"])
+        day_step = int(d["day_step"])
+        iphysiq = int(d["iphysi"])
 
-    step = 2700
-    ite_0 = 1
+    step = int( 24*3600 / day_step * iphysiq )
     ite_end = int(24*3600*nday / step)
+    ite_0 = 1
 
     tunnel_config = list()
     tunnel_config.append( { 'label' : 'TO_LMDZ', \
                             'grids' : { 'lmdz' :  {'npts' : (32,33)} }, \
-                            'exchs' : [ {'freq' : step, 'grd' : 'lmdz', 'lvl' : 39, 'in' : ['u','v','cosday'], 'out' : ['u100','v100','day100'] } ] }
+                            'exchs' : [ {'freq' : step, 'grd' : 'lmdz', 'lvl' : 39, 'in' : ['pres','temp','dewpt'], 'out' : ['theta_w'] } ] }
                         )
 
     return tunnel_config, step, ite_end, ite_0
@@ -61,14 +63,14 @@ def production():
 
     #  Models
     # ++++++++
-    from models import add_100
+    from models import sub_wet_temp
 
     #  Assemble
     # ++++++++++
     @eophis.all_in_all_out(geo_model=earth, step=step, niter=niter)
     def loop_core(**inputs):
         outputs = {}
-        outputs['u100'], outputs['v100'], outputs['day100']  = add_100(inputs['u']), add_100(inputs['v']), add_100(inputs['cosday'])
+        outputs['theta_w'] = sub_wet_temp( inputs['pres'], inputs['temp'], inputs['dewpt'] )
         return outputs
 
     #  Run
