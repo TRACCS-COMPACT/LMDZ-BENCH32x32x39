@@ -45,5 +45,8 @@ pip install -r requirements.txt
 - No Post-Process libraries required
 
 - Plotting : Python script `plots_res.py` in `POSTPROCESS`
-
+```bash
+cd LMDZ-BENCH32x32x39/BENCH32x32x39.DJ08/POSTPROCESS
+pip install -r requirements.txt
+```
 
