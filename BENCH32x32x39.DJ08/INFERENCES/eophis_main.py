@@ -14,8 +14,10 @@ def earth_info():
     with open("run.def") as f:
         d = dict(line.strip().split("=", 1) for line in f if "=" in line and not line.lstrip().startswith("#"))
         nday = int(d["nday"])
+    with open("gcm.def") as f:
+        d = dict(line.strip().split("=", 1) for line in f if "=" in line and not line.lstrip().startswith("#"))
         day_step = int(d["day_step"])
-        iphysiq = int(d["iphysi"])
+        iphysiq = int(d["iphysiq"])
 
     step = int( 24*3600 / day_step * iphysiq )
     ite_end = int(24*3600*nday / step)
@@ -24,7 +26,7 @@ def earth_info():
     tunnel_config = list()
     tunnel_config.append( { 'label' : 'TO_LMDZ', \
                             'grids' : { 'lmdz' :  {'npts' : (32,33)} }, \
-                            'exchs' : [ {'freq' : step, 'grd' : 'lmdz', 'lvl' : 39, 'in' : ['pres','temp','dewpt'], 'out' : ['theta_w'] } ] }
+                            'exchs' : [ {'freq' : step, 'grd' : 'lmdz', 'lvl' : 39, 'in' : ['pres','temp','q_spec'], 'out' : ['theta_w'] } ] }
                         )
 
     return tunnel_config, step, ite_end, ite_0
@@ -70,7 +72,7 @@ def production():
     @eophis.all_in_all_out(geo_model=earth, step=step, niter=niter)
     def loop_core(**inputs):
         outputs = {}
-        outputs['theta_w'] = sub_wet_temp( inputs['pres'], inputs['temp'], inputs['dewpt'] )
+        outputs['theta_w'] = sub_wet_temp( inputs['pres'], inputs['temp'], inputs['q_spec'] )
         return outputs
 
     #  Run

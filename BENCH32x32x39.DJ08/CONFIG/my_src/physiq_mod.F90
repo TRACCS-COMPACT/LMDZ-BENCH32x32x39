@@ -1284,9 +1284,6 @@ USE phys_local_var_mod, ONLY: phys_local_var_init, phys_local_var_end, &
     REAL viscom, viscoh
     INTEGER ieru
 
-    ! Python exchange
-    INTEGER :: nstep, nyear, istep
-
     !AI namelist pour gerer le double appel de Ecrad
     CHARACTER(len=512) :: namelist_ecrad_file
 
@@ -2499,21 +2496,14 @@ END IF
        ENDDO
     ENDDO
 
-    ! +++ Python coupling:: send inputs
+    ! +++ Python coupling
     IF (lk_pycpl) THEN
-       nstep = NINT( daysec / phys_tstep )
-       nyear = year_len * nstep
-       istep = MOD( days_elapsed*nstep + INT(jh_cur*nstep), nyear ) + 1
-       cosday = COS( 2.*pi*istep/nyear ) * SQRT(2.)
-       !
-       ! Send
-       CALL send_to_python_phys('u', u_seri, itap)
-       CALL send_to_python_phys('v', v_seri, itap)
-       CALL send_to_python_cpl('cosday', cosday, itap)
+       ! Send inputs
+       CALL send_to_python_phys('pres', pplay, itap)
+       CALL send_to_python_phys('temp', t_seri, itap)
+       CALL send_to_python_phys('q_spec', q_seri, itap)
        ! Receive
-       CALL receive_from_python_phys('u100', py_du_phys, itap)
-       CALL receive_from_python_phys('v100', py_du_phys, itap)
-       CALL receive_from_python_cpl('day100', py_cosday, itap)
+       CALL receive_from_python_phys('theta_w', theta_w, itap)
     END IF
     ! +++++++++++++ 
 
