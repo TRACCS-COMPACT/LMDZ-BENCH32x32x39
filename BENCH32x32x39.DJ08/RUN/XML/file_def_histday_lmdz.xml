@@ -570,6 +570,7 @@
                 <field field_ref="iwcon" level="5" />
                 <field field_ref="temp" level="3" />
                 <field field_ref="theta" level="3" />
+                <field field_ref="thetaw" level="3" />
                 <field field_ref="ovap" level="3" />
                 <field field_ref="ovapinit" level="10" />
                 <field field_ref="oliq" level="3" />

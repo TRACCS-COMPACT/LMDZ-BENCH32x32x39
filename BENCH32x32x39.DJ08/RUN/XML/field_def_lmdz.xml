@@ -767,6 +767,7 @@
         <field id="iwcon"    long_name="Cloud ice water content seen by radiation"    unit="kg/kg" />
         <field id="temp"    long_name="Air temperature"    unit="K" />
         <field id="theta"    long_name="Potential air temperature"    unit="K" />
+        <field id="thetaw"    long_name="MetPy DJ08 Wet-bulb potential temperature"    unit="K" />
         <field id="ovap"    long_name="Specific humidity"    unit="kg/kg" />
         <field id="ovapinit"    long_name="Specific humidity (begin of timestep)"    unit="kg/kg" />
         <field id="oliq"    long_name="Liquid water"    unit="kg/kg" />
