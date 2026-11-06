@@ -19,7 +19,7 @@ Purpose of the experiment is to couple LMDZ BENCH test case with Python toolboxe
 ```bash
 wget http://lmdz.lmd.jussieu.fr/pub/install_lmdz.sh
 chmod +x install_lmdz.sh
-./install_lmdz.sh -name LMDZ6_PY -netcdf 0 -parallel mpi_omp -veget none -rad oldrad
+./install_lmdz.sh -name LMDZ6_PY -netcdf 0 -parallel mpi_omp -veget none -rad oldrad -bench 0
 ```
 
 - Code Compilation manager : none, use `compile.sh` script provided in `CONFIG`
