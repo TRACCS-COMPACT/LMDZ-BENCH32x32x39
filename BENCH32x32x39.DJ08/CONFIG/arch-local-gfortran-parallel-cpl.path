@@ -14,14 +14,14 @@ IOIPSL_LIBDIR="-L$(pwd)/../IOIPSL/inc -L$(pwd)/../IOIPSL/lib"
 IOIPSL_LIB="-lioipsl"
 
 # Exported
-XIOS_HOME=/home/bargea.linux/local_lib/XIOS2_OASIS
+XIOS_HOME=/home/jdoe/XIOS_OASIS
 XIOS_INCDIR="-I$XIOS_HOME/inc"
 XIOS_LIBDIR="-L$XIOS_HOME/lib"
 XIOS_LIB="-lxios -lstdc++"
 
 # Exported
-OASIS_INCDIR="-I/home/bargea.linux/local_lib/oasis3-mct/BLD/include"
-OASIS_LIBDIR="-L/home/bargea.linux/local_lib/oasis3-mct/BLD/lib"
+OASIS_INCDIR="-I/home/jdoe/oasis3-mct/BLD/include"
+OASIS_LIBDIR="-L/home/jdoe/oasis3-mct/BLD/lib"
 OASIS_LIB="-loasis.cbind -lpsmile.MPI1 -lscrip -lmct -lmpeu"
 
 # Exported

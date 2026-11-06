@@ -21,20 +21,9 @@ def Is_None(*inputs):
     return any(item is None for item in inputs)
 
 
-"""Wet-bulb potential temperature from LMDZ physics fields.
-
-Encapsulates the MetPy chain:
-    (p, T, q) --dewpoint_from_specific_humidity--> Td --wet_bulb_potential_temperature--> theta_w
-References: Bolton (1980) for theta_e; Davies-Jones (2008) polynomial for theta_w.
-"""
-import numpy as np
-import metpy.calc as mpcalc
-from metpy.units import units
-
-
 def sub_wet_temp(p, T, q):
     """Compute wet-bulb potential temperature theta_w from pressure, temperature
-       and specific humidity using Davies-Jones, 2008 formulation..
+       and specific humidity using Davies-Jones, 2008 formulation.
 
     Parameters
     ----------
@@ -85,5 +74,6 @@ if __name__ == '__main__' :
     # Run model
     # ---------
     theta_w = sub_wet_temp(p,T,q)
+
     print(f'Res    -- <theta_w>: <theta_w>: {theta_w.mean():.2f}')
     print(f'Test successful')

@@ -8,7 +8,6 @@
 %FPP_FLAGS           -P -traditional
 %FPP_DEF             NC_DOUBLE
 
-##%BASE_FFLAGS         -ffree-line-length-0 -fdefault-real-8 -fallow-argument-mismatch -fimplicit-none -g -fbacktrace -fcheck=all -ffpe-trap=invalid,zero,overflow
 %BASE_FFLAGS         -ffree-line-length-0 -fdefault-real-8 -fallow-argument-mismatch -fimplicit-none
 %BASE_CFLAGS         -w -std=c++11 -D__XIOS_EXCEPTION  # xios
 # /!\ LD must be written in Makefile syntax
