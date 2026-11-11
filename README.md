@@ -1,7 +1,7 @@
 # LMDZ-BENCH32x32x39
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24132345.svg)](https://doi.org/10.5281/zenodo.24132345)
 
-```DOI TO CREATE```
 
 ## Context and Motivation
 
