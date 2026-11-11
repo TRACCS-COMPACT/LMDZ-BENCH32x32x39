@@ -37,6 +37,11 @@ pip install -r requirements.txt
 
 ### Run
 
+- Input files :
+```bash
+wget --no-check-certificate -nv http://lmdz.lmd.jussieu.fr/pub/3DBenchs/bench_lmdz_32x32x39.tar.gz
+```
+
 - LMDZ Production Manager : None, use ``job.ksh`` in ``RUN``
 
 
